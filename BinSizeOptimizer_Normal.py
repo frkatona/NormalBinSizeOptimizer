@@ -42,13 +42,8 @@ bins_scott = scotts_rule(data)
 bins_fd = freedman_diaconis_rule(data)
 bins_doane = doanes_formula(data)
 
-# Fit a Gaussian distribution to the data
 mu, std = norm.fit(data)
-
-# Create x values for the Gaussian fit line
 x = np.linspace(np.min(data), np.max(data), 100)
-
-# Calculate the Gaussian fit line
 p = norm.pdf(x, mu, std)
 
 # Plot histograms and Gaussian fit lines
